@@ -1,0 +1,61 @@
+body {
+	width:100%;
+	display: flex;
+	justify-content:center;
+	align-content:center;
+	align-items:center;
+	padding-top:4em;
+	margin:0;
+	text-align:center;
+
+}
+.love, .hate {
+	font-family: helvetica , sans serif;
+	text-transform: uppercase;
+	font-size:50px;
+	font-weight: 700;
+}
+.love {
+			opacity: 0;
+	color: purple;
+	transform: rotate(-10deg);
+
+-webkit-animation: text-pulse 2s linear infinite;
+		animation: text-pulse 2s linear infinite;
+
+}.hate {
+		opacity: 0;
+		color: pink;
+transform: rotate(10deg);
+		-webkit-animation-delay:2s;
+		animation-delay:2s;
+				-webkit-animation: text-pulse 2s linear infinite;
+animation: text-pulse 2s linear infinite;
+	
+}
+#head_1_ {	
+	transform-origin: center;
+	animation: head-bob 0.5s linear infinite;
+}
+@keyframes text-pulse {
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes head-bob {
+	0%{
+		transform: translateX(0);
+	}
+	50%{
+		transform: translateX(-20px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
